@@ -1,9 +1,17 @@
 <div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-4">
+        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900 dark:text-gray-100">
+                <input type="text" id="searchInput" placeholder="Search..." wire:model.debounce.500ms="search" />
+                <x-primary-button>{{ __('ADD New Q/A') }}</x-primary-button>
+            </div>
+        </div>
+    </div>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6 text-gray-900">
+            <div class="p-2 text-gray-900">
                 <!-- Add search input -->
-                <input type="text" id="searchInput" placeholder="Search..." wire:model.debounce.500ms="search" />
+                
                 <!-- Display FAQs within a table -->
                 <table class="border-collapse table-auto w-full text-sm">
                     <thead>
